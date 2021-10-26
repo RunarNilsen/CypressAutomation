@@ -40,7 +40,7 @@ describe("My First Test", () => {
     cy.get('@productLocator').find(".product").should("have.length", 4);
 
     // Assertion
-    cy.get(".brand").should('have.text', 'GREENKART')
+    cy.get(".brand").should('have.text', 'GREENKART') 
 
 
 
