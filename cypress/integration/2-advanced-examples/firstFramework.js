@@ -42,6 +42,8 @@ describe("My Second Test Suite", function () {
         var res = amount.split(" ");
         res = res[1].trim();
         sum = Number(sum) + Number(res);
+  // we put this log into the PROMISE, otherwise it will run before executing above codes
+
       })
       .then(function () {
         cy.log(sum).debug();
@@ -56,6 +58,26 @@ describe("My Second Test Suite", function () {
       });
 
 
+    cy.contains('Checkout').click()
+    cy.get('#country').type('India') // when typing india, it appear in popup menu
+    // before listing india, it takes 7 second. So we modified timing as 8s above
+    // up to 10 sec it can be acceptable
+    //changing configuration
+    // cy.get('.suggestions > ul > li > a', { timeout: 10000 }).click() 
+    cy.get('.suggestions > ul > li > a').click() // you can select it like that
+    // That element is covered by another element.Thats why we use 'force:true'
+    cy.get('#checkbox2').click({ force: true }) 
+    cy.get('input[type="submit"]').click()
+    //cy.get('.alert').should('have.text','Success! Thank you! Your order will be delivered in next few weeks :-).')
+    cy.get('.alert').then(function (element) {
+      const actualText = element.text()
+      expect(actualText.includes("Success")).to.be.true
+    })
+    // another ways to verify 
+    //cy.get('.alert').should('include.text','Success!') 
+    // cy.get(`.alert`).should('contain.text', 'Success!')
+
+ 
 
 
 

@@ -45,7 +45,7 @@ this.data.productName.forEach(function(element) {
  var res= amount.split(" ")
 res= res[1].trim()
 sum= Number(sum)+Number(res)
-
+// we put this log into the PROMISE, otherwise it will run before executing above codes
 }).then(function()
 {
     cy.log(sum)
