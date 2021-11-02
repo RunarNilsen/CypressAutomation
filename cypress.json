@@ -1,20 +1,14 @@
 {
-  "chromeWebSecurity":false,
+  "chromeWebSecurity": false,
   "defaultCommandTimeout": 8000,
   "pageLoadTimeout": 30000,
   "reporter": "mochawesome",
-  
   "env": {
     "url": "https://rahulshettyacademy.com"
   },
   "testFiles": "**/*.js",
-
   "retries": {
-    
     "runMode": 1
   },
-  
- 
-  
-  "projectId": "a5zbka"
+  "projectId": "sp5mug"
 }

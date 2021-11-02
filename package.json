@@ -7,7 +7,7 @@
     "test": "node_modules\\.bin\\cypress run",
     "headTest": "npm run test -- --headed",
     "chromeTest": "npm run test -- --browser chrome",
-    "recordDashBoardTest": "npm run test -- --record --key fa423514-5a84-42a7-b6a0-b5e7191bba12 --reporter mochawesome",
+    "recordDashBoardTest": "npm run test -- --record --key 424d34fb-b30d-4572-ad4b-ae9d91d9f3e3 --reporter mochawesome",
     "GreenKartTest": "npm run test -- --spec \"cypress/integration/GreenKart/*\""
   },
   "cypress-cucumber-preprocessor": {
@@ -23,9 +23,10 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^7.7.0",
-    "cypress-cucumber-preprocessor": "^2.5.5",
-    "mocha": "^5.2.0",
-    "mochawesome": "^4.0.1",
+    "cypress-cucumber-preprocessor": "^4.3.0",
+    "cypress-iframe": "^1.0.1",
+    "mocha": "^9.1.3",
+    "mochawesome": "^6.3.1",
     "multiple-cucumber-html-reporter": "^1.18.0"
   }
 }

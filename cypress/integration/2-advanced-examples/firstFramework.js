@@ -16,7 +16,7 @@ describe("My Second Test Suite", function () {
     cy.log(this.data.name + " , " + this.data.gender);
     const homePage = new HomePage();
     const productPage = new ProductPage();
-    cy.visit(Cypress.env("url") + "/angularpractice/");
+    cy.visit(Cypress.env("url") + "/angularpractice/"); // importing global variable of url
 
     // homePage.getEditBox()  getting web element
     homePage.getEditBox().type(this.data.name);
@@ -87,9 +87,9 @@ describe("My Second Test Suite", function () {
     // it last
   });
 
-
-
-
+  it("My second test case", function () {
+    expect("a").to.equal('a')
+  });
 
 
 

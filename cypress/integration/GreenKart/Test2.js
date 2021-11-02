@@ -6,9 +6,11 @@ describe('My Second Test Suite', function()
 it('My FirstTest case',function() {
 
 console.log("starting text")
+// "https://rahulshettyacademy.com/seleniumPractise/#/"
+// "https://rahulshettyacademy.com"
 cy.visit("https://rahulshettyacademy.com")
 cy.get('.search-keyword').type('ca')
-cy.wait(2000)
+cy.wait(8000)
 //selenium get hit url in browser, cypress get acts like findElement of selenium
 
 //Parent child chaining
