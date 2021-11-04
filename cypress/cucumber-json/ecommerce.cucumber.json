@@ -1,6 +1,6 @@
 [
   {
-    "description": "    application Regression",
+    "description": "    application Regression(write more description if you want)",
     "keyword": "Feature",
     "name": "End to end Ecommerce validation",
     "line": 1,
@@ -28,7 +28,7 @@
             "name": "I open ECommerce Page",
             "result": {
               "status": "passed",
-              "duration": 4358000000
+              "duration": 978000000
             }
           },
           {
@@ -38,7 +38,7 @@
             "name": "I add items to Cart",
             "result": {
               "status": "passed",
-              "duration": 5900000000
+              "duration": 881000000
             }
           },
           {
@@ -48,7 +48,7 @@
             "name": "Validate the total prices",
             "result": {
               "status": "passed",
-              "duration": 98000000
+              "duration": 97000000
             }
           },
           {
@@ -58,7 +58,7 @@
             "name": "select the country submit and verify Thankyou",
             "result": {
               "status": "passed",
-              "duration": 5910000000
+              "duration": 5887000000
             }
           }
         ]
@@ -83,7 +83,7 @@
             "name": "I open ECommerce Page",
             "result": {
               "status": "passed",
-              "duration": 1433000000
+              "duration": 646000000
             }
           },
           {
@@ -110,7 +110,7 @@
             "name": "I fill the form details",
             "result": {
               "status": "passed",
-              "duration": 514000000
+              "duration": 488000000
             }
           },
           {
@@ -120,7 +120,7 @@
             "name": "validate the forms behaviour",
             "result": {
               "status": "passed",
-              "duration": 117000000
+              "duration": 88000000
             }
           },
           {
@@ -130,7 +130,7 @@
             "name": "select the Shop Page",
             "result": {
               "status": "passed",
-              "duration": 1261000000
+              "duration": 369000000
             }
           }
         ]
