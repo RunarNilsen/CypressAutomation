@@ -2,23 +2,23 @@
   "stats": {
     "suites": 1,
     "tests": 2,
-    "passes": 2,
-    "pending": 0,
+    "passes": 1,
+    "pending": 1,
     "failures": 0,
-    "start": "2021-11-04T14:27:55.324Z",
-    "end": "2021-11-04T14:28:14.278Z",
-    "duration": 18954,
+    "start": "2021-11-07T03:42:01.608Z",
+    "end": "2021-11-07T03:42:16.295Z",
+    "duration": 14687,
     "testsRegistered": 2,
     "passPercent": 100,
-    "pendingPercent": 0,
+    "pendingPercent": 50,
     "other": 0,
     "hasOther": false,
-    "skipped": 0,
-    "hasSkipped": false
+    "skipped": 1,
+    "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "163b03a9-52c2-4629-a74e-ca3f4b6d99c1",
+      "uuid": "cc8a8a8e-a162-4192-8d9f-91058479e497",
       "title": "",
       "fullFile": "cypress/integration/2-advanced-examples/BDD/ecommerce.feature",
       "file": "cypress/integration/2-advanced-examples/BDD/ecommerce.feature",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "8f944b3c-f54b-423e-b72b-7b42a3c19a0f",
+          "uuid": "aac50d8a-cb37-4f28-bb62-934cdc3f7acf",
           "title": "End to end Ecommerce validation",
           "fullFile": "",
           "file": "",
@@ -38,25 +38,29 @@
               "title": "Ecommerce products delivery",
               "fullTitle": "End to end Ecommerce validation Ecommerce products delivery",
               "timedOut": null,
-              "duration": 12488,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
+              "duration": 78,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
-              "err": {},
-              "uuid": "7983a571-45fe-48ac-bf4b-aa9cc991a58e",
-              "parentUUID": "8f944b3c-f54b-423e-b72b-7b42a3c19a0f",
+              "code": "// register this scenario with the cucumber data collector\n// but don't run it\n// Tell mocha this is a skipped test so it also shows correctly in Cypress\nconst state = window.testState;\ncy.then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() => state.onFinishScenario(scenario))\n  // eslint-disable-next-line func-names\n  .then(function () {\n    return this.skip();\n  });",
+              "err": {
+                "message": "CypressError: sync skip; aborting execution",
+                "estack": "[object Object]\nFrom Your Spec Code:\n    at Context.eval (http://localhost:58035/__cypress/tests?p=cypress\\integration\\2-advanced-examples\\BDD\\ecommerce.feature:11821:10)",
+                "diff": null
+              },
+              "uuid": "cbf1eea7-c71d-4147-993d-8ab9f2231f11",
+              "parentUUID": "aac50d8a-cb37-4f28-bb62-934cdc3f7acf",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "Filling the form to shop",
               "fullTitle": "End to end Ecommerce validation Filling the form to shop",
               "timedOut": null,
-              "duration": 3527,
+              "duration": 11494,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,21 +69,22 @@
               "context": null,
               "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
               "err": {},
-              "uuid": "de66a897-6ece-4383-baf0-39156c7e68ec",
-              "parentUUID": "8f944b3c-f54b-423e-b72b-7b42a3c19a0f",
+              "uuid": "dd7760f2-6b4f-4b14-90f1-a7ec4ce78125",
+              "parentUUID": "aac50d8a-cb37-4f28-bb62-934cdc3f7acf",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "7983a571-45fe-48ac-bf4b-aa9cc991a58e",
-            "de66a897-6ece-4383-baf0-39156c7e68ec"
+            "dd7760f2-6b4f-4b14-90f1-a7ec4ce78125"
           ],
           "failures": [],
           "pending": [],
-          "skipped": [],
-          "duration": 16015,
+          "skipped": [
+            "cbf1eea7-c71d-4147-993d-8ab9f2231f11"
+          ],
+          "duration": 11572,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -1,7 +1,7 @@
 class HomePage
 {
 
-getEditBox()
+getEditBox() 
 {
     return cy.get('input[name="name"]:nth-child(2)')
 }

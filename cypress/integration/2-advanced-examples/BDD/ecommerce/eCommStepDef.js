@@ -13,7 +13,7 @@ Given('I open ECommerce Page',()=>
     cy.visit(Cypress.env('url')+"/angularpractice/")
 })
 
-//--------------
+//-------------- 
 When('I add items to Cart',function()
 {
     homePage.getShopTab().click()
